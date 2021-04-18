@@ -31,6 +31,7 @@ set :puma_init_active_record, true
 set :format, :pretty
 set :log_level, :debug
 set :pty, true
+set :bundle_jobs, 1
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
