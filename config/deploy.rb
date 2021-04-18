@@ -1,7 +1,6 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.16.0"
 
-server '3.139.85.171', port: 22, roles: [:web, :app, :db], primary: true
 set :application, "wemarketplace"
 set :repo_url, "git@github.com:kamalpanhwar/wemarketplace.git"
 
