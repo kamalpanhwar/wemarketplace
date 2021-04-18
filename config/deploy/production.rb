@@ -1,5 +1,14 @@
 set :stage, :production
+set :branch, 'production'
+set :deploy_to, '/var/www/wemarketplace'
+
 server "3.139.85.171", user: "wemarketplace", roles: %w{app db web}
+
+set :ssh_options, {
+  keys: %w(~/.ssh/kamal_aws.pem),
+  forward_agent: false,
+  auth_methods: %w(publickey password)
+}
 
 
 # , my_property: :my_value
