@@ -1,4 +1,3 @@
-set :stage, :production
 set :branch, 'production'
 set :deploy_to, '/var/www/wemarketplace'
 
