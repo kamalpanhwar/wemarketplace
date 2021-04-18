@@ -19,6 +19,16 @@ set :puma_preload_app, true
 set :puma_worker_timeout, nil
 set :puma_init_active_record, true  # Change to false when not using ActiveRecord
 
+
+set :puma_rackup, -> { File.join(current_path, 'config.ru') }
+set :puma_conf, "#{shared_path}/puma.rb"
+set :puma_role, :app
+set :puma_env, fetch(:rack_env, fetch(:rails_env, 'production'))
+set :puma_threads, [0, 16]
+set :puma_workers, 0
+set :puma_init_active_record, true
+
+
 set :format, :pretty
 set :log_level, :debug
 set :pty, true
