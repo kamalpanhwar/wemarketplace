@@ -33,6 +33,10 @@ set :log_level, :debug
 set :pty, true
 set :bundle_jobs, 1
 
+
+
+append :linked_files, "config/master.key", "config/credentials.yml.enc"
+
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
 
